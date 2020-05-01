@@ -1,5 +1,5 @@
-# WavesLPoSDistributer
-A revenue distribution tool for Waves nodes
+# WestLPoSDistributer
+A revenue distribution tool for West nodes
 
 ## Installation
 First of all, you need to install Node.js (https://nodejs.org/en/) and NPM. Afterwards the installation of the dependencies could be done via:
@@ -16,7 +16,7 @@ Once the dependencies are installed, the script that generates the payouts need 
         - endBlock: the block until you want to distribute the earnings
         - filename: file to which the payments for the mass payment tool are written
         - node: address of your node in the form http://<ip>:<port
-        - percentageOfFeesToDistribute: the percentage of Waves fees that you want to distribute
+        - percentageOfFeesToDistribute: the percentage of West fees that you want to distribute
  */
 var config = {
     address: '',
