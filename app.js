@@ -103,19 +103,11 @@ var prepareDataStructure = function(blocks) {
                 transaction.block = block.height;
                 myCanceledLeases[transaction.leaseId] = transaction;
             }
-            // considering West fees
-            if (!transaction.feeAsset || transaction.feeAsset === '' || transaction.feeAsset === null) {
-                if (transaction.fee < 10 * Math.pow(10, 8)) {
-                            westFees += transaction.fee;
-                }
-            } else if (transaction.type === 4) {
-                westFees += 10000000;
-            }
         });
         if (previousBlock) {
             block.previousBlockWestFees = previousBlock.westFees;
         }
-        block.westFees = westFees;
+        block.westFees = block.fee;
         previousBlock = block;
     });
 };
